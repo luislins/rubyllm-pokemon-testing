@@ -299,7 +299,7 @@ GEM
       faraday-retry (>= 1)
       marcel (~> 1.0)
       zeitwerk (~> 2)
-    ruby_llm-schema (0.1.8)
+    ruby_llm-schema (0.1.9)
     rubyzip (3.0.2)
     securerandom (0.4.1)
     selenium-webdriver (4.35.0)
