@@ -15,6 +15,10 @@ class PokemonsController < ApplicationController
     @pokemon = Pokemon.new
   end
 
+  def new_with_ai
+    @pokemon = Pokemon.new
+  end
+
   # GET /pokemons/1/edit
   def edit
   end
@@ -31,6 +35,19 @@ class PokemonsController < ApplicationController
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @pokemon.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def create_with_ai
+    chat = RubyLLM.chat
+
+    response = chat.with_schema(PokemonSchema).ask(params[:pokemon_description])
+
+    @pokemon = Pokemon.new(response.content)
+    if @pokemon.save
+      redirect_to @pokemon, notice: "AI Pokemon was successfully created from description: #{response.content}"
+    else
+      render :new_with_ai, status: :unprocessable_entity
     end
   end
 

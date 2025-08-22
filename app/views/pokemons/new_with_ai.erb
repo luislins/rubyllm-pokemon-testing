@@ -1,0 +1,12 @@
+<% content_for :title, "New pokemon with AI" %>
+
+<h1>New pokemon with AI</h1>
+
+<%= form_with url: create_with_ai_pokemons_path, method: :post do |form| %>
+  <%= form.text_area :pokemon_description, placeholder: "Enter a description of the pokemon you want to create" %>
+  <%= form.submit "Create", class: "button" %>
+<% end %>
+
+<div>
+  <%= link_to "Back to pokemons", pokemons_path %>
+</div>

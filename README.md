@@ -1,24 +1,8 @@
-# README
+# 🚀 RubyLLM Testing Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> **Projeto para testar o RubyLLM em Rails**
 
-Things you may want to cover:
+## 🎯 Sobre
 
-* Ruby version
+Aplicação Rails simples para testar as funcionalidades do [RubyLLM](https://github.com/ruby-llm/ruby_llm):
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
